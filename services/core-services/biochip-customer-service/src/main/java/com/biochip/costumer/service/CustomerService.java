@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.biochip.costumer.entity.Customer;
+import com.biochip.costumer.exception.BusinessInternalErrorException;
+import com.biochip.costumer.exception.ResourceNotFoundException;
 import com.biochip.costumer.feignclient.AutomobileFeignClient;
 import com.biochip.costumer.feignclient.MotorcycleFeignClient;
 import com.biochip.costumer.models.Automobile;
@@ -35,7 +37,8 @@ public class CustomerService {
 	}
 	
 	public Customer getCustomerById(Long id) {
-		return repository.findById(id).orElse(null);
+		//return repository.findById(id).orElse(null);
+		return repository.findById(id).orElseThrow( () -> new ResourceNotFoundException("Record not found!"));
 	}
 	
 	public Customer save(Customer customer) {

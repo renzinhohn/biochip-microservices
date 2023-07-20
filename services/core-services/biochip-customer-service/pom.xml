@@ -53,11 +53,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<!-- spring cloud openfeign -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+		
 		<!-- spring cloud config client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -68,11 +70,13 @@
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
+		
 		<!-- spring cloud discovery eureka client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>		
+		</dependency>
+				
 		<!-- spring cloud circuit breaker -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -86,6 +90,16 @@
 		<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+		<!-- sleuth zipkin -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
 
 	</dependencies>

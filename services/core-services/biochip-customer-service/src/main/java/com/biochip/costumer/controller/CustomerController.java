@@ -39,9 +39,10 @@ public class CustomerController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Customer> getCustomer(@PathVariable("id") Long id) {
 		Customer customer = customerService.getCustomerById(id);
-		if (customer == null) {
-			return ResponseEntity.notFound().build();
-		}
+//		if (customer == null) {
+//			System.out.println("Record not found!!!!!!");
+//			return ResponseEntity.notFound().build();
+//		}
 		return ResponseEntity.ok(customer);
 	}
 
