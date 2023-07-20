@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.biochip.costumer.models.Motorcycle;
 
-@FeignClient(name = "motorcycle-service",url = "http://localhost:8083")
+@FeignClient(name = "motorcycle-service")
 public interface MotorcycleFeignClient {
 
 	@PostMapping("/motorcycle")
