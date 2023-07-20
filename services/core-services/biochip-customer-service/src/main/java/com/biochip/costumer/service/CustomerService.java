@@ -44,12 +44,14 @@ public class CustomerService {
 	}
 	
 	public List<Automobile> getAutomobiles(Long customerId){
-		List<Automobile> list = restTemplate.getForObject("http://localhost:8082/automobile/customer/{customerId}", List.class, customerId);
+		//List<Automobile> list = restTemplate.getForObject("http://localhost:8082/automobile/customer/{customerId}", List.class, customerId);
+		List<Automobile> list = restTemplate.getForObject("http://automobile-service/automobile/customer/{customerId}", List.class, customerId);
 		return list;
 	}
 	
 	public List<Motorcycle> getMotorcycles(Long customerId){
-		List<Motorcycle> list = restTemplate.getForObject("http://localhost:8083/motorcycle/customer/{customerId}", List.class, customerId);
+		//List<Motorcycle> list = restTemplate.getForObject("http://localhost:8083/motorcycle/customer/{customerId}", List.class, customerId);
+		List<Motorcycle> list = restTemplate.getForObject("http://motorcycle-service/motorcycle/customer/{customerId}", List.class, customerId);
 		return list;
 	}
 	
