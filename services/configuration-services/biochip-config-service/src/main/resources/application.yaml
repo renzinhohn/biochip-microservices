@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: multipleinstances
+          default-label: gatewayserver
           uri: https://github.com/renzinhohn/biochip-microservices
           search-paths: /services/configuration-services/biochip-config-data
   application:
